@@ -20,3 +20,5 @@ Route::get('contact', function() {
 });
 
 Route::get('about', 'PagesController@about');
+
+Route::get('articles', 'ArticlesController@index');
