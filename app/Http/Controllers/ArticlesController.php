@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Request;
+use Request\CreateArticleRequest;
 use App\Article;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -30,7 +31,7 @@ class ArticlesController extends Controller
         return view('articles.create');
     }
 
-    public function store() {
+    public function store(CreateArticleRequest $request) {
         $input = Request::all();
         $input['published_at'] = Carbon::now();
 
